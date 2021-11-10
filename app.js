@@ -1,25 +1,20 @@
-var Role;
-(function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["OWNER"] = 1] = "OWNER";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
-})(Role || (Role = {}));
-//Better without types defined for objects for known values
-var person = {
-    name: "Jack",
-    age: 30,
-    hobbies: ["sports", "games"],
-    role: [2, "author"],
-    type: Role.ADMIN
+var combine = function (num1, num2, conversion, option) {
+    console.log("🚀 --- option", option);
+    var result;
+    if (typeof num1 === "number" && typeof num2 === "number") {
+        result = num1 + num2;
+    }
+    else {
+        result = num1.toString() + num2.toString();
+    }
+    if (conversion === "as-number") {
+        return +result;
+    }
+    return result;
 };
-var favoriteActivities; // any[]
-favoriteActivities = ["test"];
-person.role = [3, "jack"];
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log("For Loop =>", hobby.toUpperCase()); //Understands values are strings because of string array
-}
-if (person.type === Role.ADMIN) {
-    console.log("Enum check =>", person.type === Role.ADMIN);
-}
-console.log("Person Object =>", person);
+var unionType = combine(1, 2, "as-number", false);
+var unionType2 = combine("number1", "number2", "as-text");
+var literalType = combine("1", "2", "as-number");
+console.log("🚀 --- unionType", unionType);
+console.log("🚀 --- unionType2", unionType2);
+console.log("🚀 --- literalType", literalType);

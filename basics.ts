@@ -1,4 +1,4 @@
-const addNumbers = (num1: number, num2: number, showResults: boolean) => {
+const addNumbers = (num1: number, num2: number, showResults?: boolean) => {
   if (showResults) return num1 + num2;
 };
 
