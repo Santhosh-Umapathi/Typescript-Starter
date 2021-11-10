@@ -1,20 +1,18 @@
-var combine = function (num1, num2, conversion, option) {
-    console.log("🚀 --- option", option);
-    var result;
-    if (typeof num1 === "number" && typeof num2 === "number") {
-        result = num1 + num2;
-    }
-    else {
-        result = num1.toString() + num2.toString();
-    }
-    if (conversion === "as-number") {
-        return +result;
-    }
-    return result;
+var addNums = function (n1, n2) {
+    //Return type declarations: void, string, number etc
+    return String(n1 + n2);
 };
-var unionType = combine(1, 2, "as-number", false);
-var unionType2 = combine("number1", "number2", "as-text");
-var literalType = combine("1", "2", "as-number");
-console.log("🚀 --- unionType", unionType);
-console.log("🚀 --- unionType2", unionType2);
-console.log("🚀 --- literalType", literalType);
+var addNumsCallback = function (n1, n2, cb) {
+    //Return type declarations: void, string, number etc
+    cb(n1 + n2);
+};
+var printResults = function (result) {
+    console.log("Results =>", result);
+};
+var newFunction; //Function Type with return type declaration
+newFunction = addNums;
+// newFunction = printResults; //Error
+printResults(addNums(1, 2));
+addNumsCallback(1, 2, function (res) {
+    console.log("callback value =>", res);
+});
