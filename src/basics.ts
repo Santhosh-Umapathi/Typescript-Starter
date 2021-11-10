@@ -7,7 +7,7 @@ let unknown: boolean; //Defining type for unknown value
 
 const number1 = 2;
 const number2 = 2.8; //"2.8"
-const printResults = true; //"false"
+const printCheck = true; //"false"
 
-const results = addNumbers(number1, number2, printResults);
+const results = addNumbers(number1, number2, printCheck);
 console.log("🚀 --- results", results);
