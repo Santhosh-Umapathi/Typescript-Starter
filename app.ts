@@ -13,4 +13,4 @@ const generateErrors = (): never => {
   };
 };
 
-generateErrors();
+// generateErrors();
