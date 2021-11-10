@@ -5,10 +5,11 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "start": "lite-server",
+    "compile": "npx tsc app.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Santhosh Umapathi",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1"
