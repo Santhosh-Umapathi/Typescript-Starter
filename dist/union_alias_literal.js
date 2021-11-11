@@ -1,5 +1,6 @@
 "use strict";
-const combine = (num1, num2, conversion, option) => {
+const combine = (num1, //type alias to reuse
+num2, conversion, option) => {
     console.log("🚀 --- option", option);
     let result;
     if (typeof num1 === "number" && typeof num2 === "number") {
