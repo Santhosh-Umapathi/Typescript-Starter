@@ -1,7 +1,5 @@
 import { PointClass } from "./class_concept";
 
-PointClass;
-
 let userInput: unknown; //better than "any"
 let username: string;
 

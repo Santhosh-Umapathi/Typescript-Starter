@@ -1,9 +1,10 @@
 type UnionType = number | string;
+type LiteralType = "as-text" | "as-number";
 
 const combine = (
   num1: UnionType, //type alias to reuse
   num2: number | string,
-  conversion: "as-text" | "as-number",
+  conversion: LiteralType,
   option?: boolean
 ) => {
   console.log("🚀 --- option", option);

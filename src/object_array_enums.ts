@@ -1,7 +1,7 @@
 enum Role {
-  ADMIN,
-  OWNER,
-  AUTHOR,
+  ADMIN, // =0
+  OWNER, // =1
+  AUTHOR, // =2
 }
 
 //Better without types defined for objects for known values
