@@ -1,4 +1,4 @@
-class PointClass {
+export class PointClass {
   //   private a: number; //not accessible outside
   //   b: number;
 

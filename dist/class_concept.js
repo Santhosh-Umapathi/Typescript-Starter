@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PointClass = void 0;
 class PointClass {
     //   private a: number; //not accessible outside
     //   b: number;
@@ -24,6 +26,7 @@ class PointClass {
         console.log("🚀 --- PointClass --- seta --- _a", this._a);
     }
 }
+exports.PointClass = PointClass;
 const point = new PointClass(1, 2);
 point.a = 10;
 console.log("🚀 --- point", point);
