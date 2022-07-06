@@ -1,13 +1,27 @@
-const addNumbers = (num1: number, num2: number, showResults?: boolean) => {
-  if (showResults) return num1 + num2;
-};
+function add(n1: number, n2: number, showResult: boolean, phrase?: string) {
+  const results = n1 + n2;
 
-let unknown: boolean; //Defining type for unknown value
-// unknown = "test"; //Error
+  if (showResult) {
+    phrase ? console.log(phrase + results) : console.log(results);
+  }
 
-const number1 = 2;
-const number2 = 2.8; //"2.8"
-const printCheck = true; //"false"
+  return results;
+}
 
-const results = addNumbers(number1, number2, printCheck);
-console.log("🚀 --- results", results);
+let numberOne: number; // If initial values is unknown
+numberOne = 5;
+
+const numberTwo = 4;
+const printResults = true;
+const resultPhrase = "Results are: ";
+
+add(numberOne, numberTwo, printResults, resultPhrase);
+
+let userInput: unknown;
+let userName: string;
+userInput = 5;
+userInput = "Max";
+
+if (typeof userInput === "string") {
+  userName = userInput;
+}

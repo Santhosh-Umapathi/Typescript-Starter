@@ -1,35 +1,37 @@
+// Enum
 enum Role {
-  ADMIN, // =0
-  OWNER, // =1
-  AUTHOR, // =2
+  ADMIN, //0
+  AUTHOR = 2, //2
+  USER = "Mac_User", //3
 }
 
-//Better without types defined for objects for known values
 const person: {
   name: string;
   age: number;
-  hobbies: string[];
-  role: [number, string]; //tuple, only this order is allowed, PUSH will work(beaware)
-  type: Role;
+  hobbies: string[]; //String Array
+  role: [number, string]; //Tuple
+  allowedRoles: Role;
 } = {
-  name: "Jack",
+  name: "John",
   age: 30,
-  hobbies: ["sports", "games"],
+  hobbies: ["Sports", "Cooking"],
   role: [2, "author"],
-  type: Role.ADMIN,
+  allowedRoles: Role.ADMIN,
 };
 
-let favoriteActivities: string[]; // any[](dont use any, same as js)
-favoriteActivities = ["test"];
+// person.role.push("admin");
+person.role[0] = 10;
 
-person.role = [3, "jack"];
+let favoriteActivities: string[];
+
+favoriteActivities = ["Sports", "Cooking"];
 
 for (const hobby of person.hobbies) {
-  console.log("For Loop =>", hobby.toUpperCase()); //Understands values are strings because of string array
+  console.log(hobby.toLocaleUpperCase());
 }
 
-if (person.type === Role.ADMIN) {
-  console.log("Enum check =>", person.type === Role.ADMIN);
-}
+console.log(person.name);
 
-console.log("Person Object =>", person);
+if (person.allowedRoles === Role.AUTHOR) {
+  console.log("is admin");
+}

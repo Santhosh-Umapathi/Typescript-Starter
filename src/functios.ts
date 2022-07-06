@@ -1,28 +1,31 @@
-const addNums = (n1: number, n2: number): string => {
-  //Return type declarations: void, string, number etc
-  return String(n1 + n2);
+const addWithCallback = (
+  a: number,
+  b: number,
+  callback: (num: number) => void
+): number => {
+  const results = a + b;
+
+  callback(results);
+  return results;
 };
 
-const addNumsCallback = (
-  n1: number,
-  n2: number,
-  cb: (num: number) => void
-): void => {
-  //Return type declarations: void, string, number etc
-  cb(n1 + n2);
+const printResultsWithVal = (num: number): void => {
+  console.log(`Result: ${num}`);
 };
 
-const printResults = (result: string) => {
-  console.log("Results =>", result);
+printResultsWithVal(
+  addWithCallback(5, 12, (res) => {
+    console.log("CALLBACK =>", res);
+  })
+);
+
+let newFunction: (a: number, b: number) => number;
+
+const generateError = (message: string): never => {
+  throw [message];
 };
 
-let newFunction: (a: number, b: number) => string; //Function Type with return type declaration
+console.log(generateError("Something went wrong"));
 
-newFunction = addNums;
-// newFunction = printResults; //Error
-
-printResults(addNums(1, 2));
-
-addNumsCallback(1, 2, (res) => {
-  console.log("callback value =>", res);
-});
+// newFunction = addWithCallback;
+// newFunction = printResultsWithVal || 5;
