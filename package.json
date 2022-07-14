@@ -4,9 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "init-ts": "tsc --init",
     "start": "lite-server",
     "compile": "npx tsc -w",
-    "init-ts": "tsc --init"
+    "generateOutput":"tsc"
   },
   "keywords": [],
   "author": "Santhosh Umapathi",
