@@ -75,3 +75,33 @@ let employeeNew: Employee = {
 };
 
 employeeNew.id = 2;
+
+/*--- Union Types and Narrowing ---*/
+const kgToLbs = (value: number | string): number => {
+  //Narrowing
+  if (typeof value === "number") {
+    return value * 2.2;
+  }
+  return +value * 2.2;
+};
+
+/*--- Intersection Types  ---*/
+type Drag = {
+  isDragging: boolean;
+};
+
+type Resize = {
+  isResizing: boolean;
+};
+
+type Check = Drag & Resize; // Intersection Type
+
+let check: Check = {
+  isDragging: true,
+  isResizing: true,
+};
+
+/*--- Literal Types  ---*/
+type Sizes = "Small" | "Medium" | "Large";
+
+let sizeValue: Sizes = "Small";
