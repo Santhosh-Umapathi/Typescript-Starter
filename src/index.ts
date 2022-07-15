@@ -105,3 +105,16 @@ let check: Check = {
 type Sizes = "Small" | "Medium" | "Large";
 
 let sizeValue: Sizes = "Small";
+
+/*--- Null | Undefined Types  ---*/
+type NullChecks = string | null | undefined;
+
+const nullChecks = (name: NullChecks) => {
+  if (name) {
+    console.log("🚀 --- name", name);
+  } else {
+    console.log("🚀 --- Hello Null");
+  }
+};
+
+nullChecks(undefined);
