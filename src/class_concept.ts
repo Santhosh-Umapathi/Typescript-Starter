@@ -29,3 +29,14 @@ export class PointClass {
 const point = new PointClass(1, 2);
 point.a = 10;
 console.log("🚀 --- point", point);
+
+interface Point {
+  x: number;
+  y: number;
+}
+
+const pointCheck = (point: Point) => {
+  console.log("point", point);
+};
+
+pointCheck({ x: 1, y: 1 });

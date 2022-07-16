@@ -1,5 +1,3 @@
-import { PointClass } from "./class_concept";
-
 /* --- Types --- */
 let num: number;
 let str: string;
