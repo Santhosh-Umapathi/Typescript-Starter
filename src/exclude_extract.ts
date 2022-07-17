@@ -1,7 +1,7 @@
 type Drinks = "coke" | "sprite" | "water" | "beer" | "wine";
 
 /*--- EXTRACT - PICK ---*/
-type JamesDrinks = Extract<Drinks, "wine" | "soda">; // sode doesnt exist
+type JamesDrinks = Extract<Drinks, "wine" | "soda">; // soda doesnt exist
 
 let jamesDrinks: JamesDrinks = "wine";
 
